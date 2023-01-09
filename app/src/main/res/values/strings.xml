@@ -7,4 +7,13 @@
     <string name="userInputScreen">User Input Screen</string>
     <string name="enterName">Enter your name</string>
     <string name="confirmName">Confirm</string>
+
+    <string-array name="operators">
+        <item>+</item>
+        <item>-</item>
+        <item>x</item>
+        <item>/</item>
+        <item>%</item>
+    </string-array>
+
 </resources>
