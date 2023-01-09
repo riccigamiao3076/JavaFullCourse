@@ -11,6 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     Button userInputButton;
+    Button expressionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         userInputButton = findViewById(R.id.inputButton);
+        expressionButton = findViewById(R.id.expreButton);
 
         userInputButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,6 +28,13 @@ public class MainActivity extends AppCompatActivity {
                 //get to UserInput Activity
                 Intent userInputIntent = new Intent(MainActivity.this, UserInput.class);
                 startActivity(userInputIntent);
+            }
+        });
+
+        expressionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Expressions", Toast.LENGTH_LONG).show();
             }
         });
 
