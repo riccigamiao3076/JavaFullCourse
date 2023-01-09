@@ -7,6 +7,22 @@
     <string name="userInputScreen">User Input Screen</string>
     <string name="enterName">Enter your name</string>
     <string name="confirmName">Confirm</string>
+    <string name="additionToast">Addition</string>
+    <string name="subtractionToast">Subtraction</string>
+    <string name="multiplicationToast">Multiplication</string>
+    <string name="divisionToast">Division</string>
+    <string name="modulationToast">Modulation</string>
+    <string name="plus">+</string>
+    <string name="sub">-</string>
+    <string name="times">x</string>
+    <string name="divided">/</string>
+    <string name="mod">%</string>
+    <string name="enterValue">Please enter a value</string>
+    <string name="expressions">Expressions</string>
+    <string name="expressionsScreen">Expressions Screen</string>
+    <string name="enterVal">Enter a value</string>
+    <string name="answer">Answer</string>
+    <string name="answerTV">Answer</string>
 
     <string-array name="operators">
         <item>+</item>

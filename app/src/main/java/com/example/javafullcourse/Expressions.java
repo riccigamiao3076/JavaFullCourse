@@ -42,8 +42,6 @@ public class Expressions extends Activity implements AdapterView.OnItemSelectedL
                 String fValue = firstValue.getText().toString();
                 String sValue = secondValue.getText().toString();
 
-                //Toast.makeText(Expressions.this,fValue, Toast.LENGTH_SHORT).show();
-
                 //Passing String fValue and sValue to the methods
                 valueChecker(fValue, sValue);
                 calculate(fValue, sValue);
@@ -57,15 +55,15 @@ public class Expressions extends Activity implements AdapterView.OnItemSelectedL
 
         //Displays Toast message based on the selected operator
         if (choice.equals("+")) {
-            Toast.makeText(this,"Addition", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.additionToast, Toast.LENGTH_SHORT).show();
         } else if (choice.equals("-")) {
-            Toast.makeText(this, "Subtraction", Toast.LENGTH_SHORT).show();
+            Toast.makeText( this, R.string.subtractionToast, Toast.LENGTH_SHORT).show();
         } else if (choice.equals("x")) {
-            Toast.makeText(this, "Multiplication", Toast.LENGTH_SHORT).show();
+            Toast.makeText( this, R.string.multiplicationToast, Toast.LENGTH_SHORT).show();
         } else if (choice.equals("/")) {
-            Toast.makeText(this, "Division", Toast.LENGTH_SHORT).show();
-        } else if (choice.equals("+")) {
-            Toast.makeText(this, "Modulation", Toast.LENGTH_SHORT).show();
+            Toast.makeText( this, R.string.divisionToast, Toast.LENGTH_SHORT).show();
+        } else if (choice.equals("%")) {
+            Toast.makeText( this, R.string.modulationToast, Toast.LENGTH_SHORT).show();
         }
         //Passing String choice (operator)
         store(choice);
@@ -85,7 +83,7 @@ public class Expressions extends Activity implements AdapterView.OnItemSelectedL
     //Checks if EditText fields is/are empty
     public void valueChecker(String fValue, String sValue) {
         if (fValue.isEmpty() || sValue.isEmpty()) {
-            Toast.makeText(Expressions.this, "Please enter a value", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.enterValue, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -104,16 +102,15 @@ public class Expressions extends Activity implements AdapterView.OnItemSelectedL
             mod = fV % sV;
 
             //Display the result on TextView displayAns
-            if (theChoice.equals("+")) {
+            if (theChoice.equals(getString(R.string.plus))) {
                 displayAns.setText(String.valueOf(sum));
-                Toast.makeText(this,String.valueOf(sum), Toast.LENGTH_SHORT).show();
-            } else if (theChoice.equals("-")) {
+            } else if (theChoice.equals(getString(R.string.sub))) {
                 displayAns.setText(String.valueOf(diff));
-            } else if (theChoice.equals("x")) {
+            } else if (theChoice.equals(getString(R.string.times))) {
                 displayAns.setText(String.valueOf(prod));
-            } else if (theChoice.equals("/")) {
+            } else if (theChoice.equals(getString(R.string.divided))) {
                 displayAns.setText(String.valueOf(quo));
-            } else if (theChoice.equals("%")) {
+            } else if (theChoice.equals(getString(R.string.mod))) {
                 displayAns.setText(String.valueOf(mod));
             }
 

@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         expressionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Expressions", Toast.LENGTH_LONG).show();
+                Toast.makeText( MainActivity.this, R.string.expressions, Toast.LENGTH_LONG).show();
                 //get to UserInput Activity
                 Intent expressionsIntent = new Intent(MainActivity.this, Expressions.class);
                 startActivity(expressionsIntent);
