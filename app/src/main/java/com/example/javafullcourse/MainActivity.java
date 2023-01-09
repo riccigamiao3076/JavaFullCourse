@@ -35,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Expressions", Toast.LENGTH_LONG).show();
+                //get to UserInput Activity
+                Intent expressionsIntent = new Intent(MainActivity.this, Expressions.class);
+                startActivity(expressionsIntent);
             }
         });
 
