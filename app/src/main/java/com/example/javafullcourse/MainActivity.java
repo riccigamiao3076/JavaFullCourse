@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         userInputButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "User Input", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, R.string.userInput, Toast.LENGTH_LONG).show();
                 //get to UserInput Activity
                 Intent userInputIntent = new Intent(MainActivity.this, UserInput.class);
                 startActivity(userInputIntent);

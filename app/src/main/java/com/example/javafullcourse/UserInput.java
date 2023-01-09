@@ -33,11 +33,11 @@ public class UserInput extends Activity {
         String name = username.getText().toString();
 
         if(name.isEmpty() || name.length() <= 2) {
-            Toast.makeText(UserInput.this, "Please enter more than 2 characters.", Toast.LENGTH_LONG).show();
+            Toast.makeText(UserInput.this, R.string.nameShort, Toast.LENGTH_LONG).show();
         } else if (name.matches(".*[0-9].*")) {
-            Toast.makeText(UserInput.this, "Please enter letters only.", Toast.LENGTH_LONG).show();
+            Toast.makeText(UserInput.this, R.string.nameInt, Toast.LENGTH_LONG).show();
         }
         //Print a string and the username
-        else Toast.makeText(UserInput.this, "Hello there " + name, Toast.LENGTH_LONG).show();
+        else Toast.makeText(UserInput.this, getString(R.string.nameConfirm) + name, Toast.LENGTH_LONG).show();
     }
 }
