@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText( MainActivity.this, R.string.expressions, Toast.LENGTH_LONG).show();
-                //get to UserInput Activity
+                //get to Expressions Activity
                 Intent expressionsIntent = new Intent(MainActivity.this, Expressions.class);
                 startActivity(expressionsIntent);
             }
@@ -47,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Math Class", Toast.LENGTH_LONG).show();
+                //get to Math Class Activity
+                Intent expressionsIntent = new Intent(MainActivity.this, MathClass.class);
+                startActivity(expressionsIntent);
             }
         });
 
