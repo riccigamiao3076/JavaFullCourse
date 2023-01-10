@@ -35,7 +35,7 @@
         android:id="@+id/mathClassButton"
         android:layout_width="123dp"
         android:layout_height="49dp"
-        android:text="Math Class"
+        android:text="@string/mathClass"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

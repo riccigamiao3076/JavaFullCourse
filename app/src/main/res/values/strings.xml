@@ -23,6 +23,28 @@
     <string name="enterVal">Enter a value</string>
     <string name="answer">Answer</string>
     <string name="answerTV">Answer</string>
+    <string name="mathClass">Math Class</string>
+    <string name="maxNum">Maximum number</string>
+    <string name="minNum">Minimum number</string>
+    <string name="rUpNum">Round UP number</string>
+    <string name="rDownNum">Round DOWN number</string>
+    <string name="absNum">Absolute number</string>
+    <string name="sqRootNum">Square Root number</string>
+    <string name="roundNum">Round number</string>
+    <string name="hypoNum">Hypotenuse number</string>
+    <string name="empty">Empty</string>
+    <string name="mathClassScreen">Math Class Screen</string>
+    <string name="maxStr">max</string>
+    <string name="minStr">min</string>
+    <string name="ceilStr">ceil</string>
+    <string name="floorStr">floor</string>
+    <string name="absStr">abs</string>
+    <string name="sqrtStr">sqrt</string>
+    <string name="resultStr">Result</string>
+    <string name="hypoStr">hypotenuse</string>
+    <string name="sideBstr">Enter side b</string>
+    <string name="sideAstr">Enter side a</string>
+    <string name="roundStr">round</string>
 
     <string-array name="operators">
         <item>+</item>

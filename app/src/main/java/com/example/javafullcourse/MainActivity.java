@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         mathClButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Math Class", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, R.string.mathClass, Toast.LENGTH_LONG).show();
                 //get to Math Class Activity
                 Intent expressionsIntent = new Intent(MainActivity.this, MathClass.class);
                 startActivity(expressionsIntent);

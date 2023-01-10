@@ -74,42 +74,42 @@ public class MathClass extends Activity implements View.OnClickListener {
         //Switch case for all buttons
         switch (v.getId()) {
             case  R.id.maxButton:
-                Toast.makeText(this, "Maximum number", Toast.LENGTH_SHORT).show();
+                Toast.makeText( this, R.string.maxNum, Toast.LENGTH_SHORT).show();
                 missingValueChecker(getFV, getSV);
                 displayAns.setText(String.valueOf(Math.max(m1,m2)));
                 break;
             case R.id.minButton:
-                Toast.makeText(this, "Minimum number", Toast.LENGTH_SHORT).show();
+                Toast.makeText( this, R.string.minNum, Toast.LENGTH_SHORT).show();
                 missingValueChecker(getFV, getSV);
                 displayAns.setText(String.valueOf(Math.min(m1,m2)));
                 break;
             case R.id.ceilButton:
-                Toast.makeText(this, "Round UP number", Toast.LENGTH_SHORT).show();
+                Toast.makeText( this, R.string.rUpNum, Toast.LENGTH_SHORT).show();
                 firstValueChecker(getFV);
                 displayAns.setText(String.valueOf(Math.ceil(v1)));
                 break;
             case R.id.floorButton:
-                Toast.makeText(this, "Round DOWN number", Toast.LENGTH_SHORT).show();
+                Toast.makeText( this, R.string.rDownNum, Toast.LENGTH_SHORT).show();
                 firstValueChecker(getFV);
                 displayAns.setText(String.valueOf(Math.floor(v1)));
                 break;
             case R.id.absButton:
-                Toast.makeText(this, "Absolute number", Toast.LENGTH_SHORT).show();
+                Toast.makeText( this, R.string.absNum, Toast.LENGTH_SHORT).show();
                 firstValueChecker(getFV);
                 displayAns.setText(String.valueOf(Math.abs(v1)));
                 break;
             case R.id.sqrtButton:
-                Toast.makeText(this, "Square Root number", Toast.LENGTH_SHORT).show();
+                Toast.makeText( this, R.string.sqRootNum, Toast.LENGTH_SHORT).show();
                 firstValueChecker(getFV);
                 displayAns.setText(String.valueOf(Math.sqrt(v1)));
                 break;
             case R.id.roundButton:
-                Toast.makeText(this, "Round number", Toast.LENGTH_SHORT).show();
+                Toast.makeText( this, R.string.roundNum, Toast.LENGTH_SHORT).show();
                 firstValueChecker(getFV);
                 displayAns.setText(String.valueOf(Math.round(v1)));
                 break;
             case R.id.hypoButton:
-                Toast.makeText(this, "Hypotenuse number", Toast.LENGTH_SHORT).show();
+                Toast.makeText( this, R.string.hypoNum, Toast.LENGTH_SHORT).show();
                 hypoValueChecker(getSideA, getSideB);
                 //Convert String to double for Hypotenuse
                 try {
@@ -126,25 +126,25 @@ public class MathClass extends Activity implements View.OnClickListener {
 
     public void missingValueChecker(String fValue, String sValue) {
         if (fValue.isEmpty()) {
-            firstValue.setError("Empty");
+            firstValue.setError(getString(R.string.empty));
 
         } else if (sValue.isEmpty()) {
-            secondValue.setError("Empty");
+            secondValue.setError(getString(R.string.empty));
         }
     }
 
     public void firstValueChecker(String fValue) {
         if (fValue.isEmpty()) {
-            firstValue.setError("Empty");
+            firstValue.setError(getString(R.string.empty));
         }
     }
 
     public void hypoValueChecker(String fValue, String sValue) {
         if (fValue.isEmpty()) {
-            aValue.setError("Empty");
+            aValue.setError(getString(R.string.empty));
 
         } else if (sValue.isEmpty()) {
-            bValue.setError("Empty");
+            bValue.setError(getString(R.string.empty));
         }
     }
 
