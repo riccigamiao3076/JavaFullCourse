@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -18,5 +19,207 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.075" />
+
+    <EditText
+        android:id="@+id/eTextNumber1"
+        android:layout_width="142dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:hint="Enter a value"
+        android:inputType="numberSigned|numberDecimal"
+        android:maxLength="8"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.162" />
+
+    <EditText
+        android:id="@+id/eTextNumber2"
+        android:layout_width="142dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:hint="Enter a value"
+        android:inputType="numberSigned|numberDecimal"
+        android:maxLength="8"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.773"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.162" />
+
+    <Button
+        android:id="@+id/maxButton"
+        android:layout_width="83dp"
+        android:layout_height="43dp"
+        android:backgroundTint="#4CAF50"
+        android:text="max"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.317"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.252" />
+
+    <Button
+        android:id="@+id/minButton"
+        android:layout_width="83dp"
+        android:layout_height="43dp"
+        android:backgroundTint="#F44336"
+        android:text="min"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.679"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.252" />
+
+    <Button
+        android:id="@+id/ceilButton"
+        android:layout_width="83dp"
+        android:layout_height="43dp"
+        android:backgroundTint="#4CAF50"
+        android:text="ceil"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.317"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.327" />
+
+    <Button
+        android:id="@+id/floorButton"
+        android:layout_width="83dp"
+        android:layout_height="43dp"
+        android:backgroundTint="#F44336"
+        android:text="floor"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.679"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.327" />
+
+    <Button
+        android:id="@+id/absButton"
+        android:layout_width="83dp"
+        android:layout_height="43dp"
+        android:backgroundTint="#E91E63"
+        android:text="abs"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.317"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.404" />
+
+    <Button
+        android:id="@+id/sqrtButton"
+        android:layout_width="83dp"
+        android:layout_height="43dp"
+        android:backgroundTint="#2196F3"
+        android:text="sqrt"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.679"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.404" />
+
+    <Button
+        android:id="@+id/roundButton"
+        android:layout_width="89dp"
+        android:layout_height="43dp"
+        android:backgroundTint="#3F51B5"
+        android:text="round"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.482" />
+
+    <TextView
+        android:id="@+id/displayAns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.553" />
+
+    <Button
+        android:id="@+id/hypoButton"
+        android:layout_width="127dp"
+        android:layout_height="51dp"
+        android:backgroundTint="#9E9D24"
+        android:text="hypotenuse"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.798" />
+
+    <TextView
+        android:id="@+id/displayHypo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.862" />
+
+    <EditText
+        android:id="@+id/sideNum2"
+        android:layout_width="142dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:hint="Enter side b"
+        android:inputType="numberDecimal"
+        android:maxLength="8"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.773"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.706" />
+
+    <EditText
+        android:id="@+id/sideNum1"
+        android:layout_width="142dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:hint="Enter side a"
+        android:inputType="numberDecimal"
+        android:maxLength="8"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.706" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
