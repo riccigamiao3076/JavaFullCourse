@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button userInputButton;
     Button expressionButton;
+    Button mathClButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         userInputButton = findViewById(R.id.inputButton);
         expressionButton = findViewById(R.id.expreButton);
+        mathClButton = findViewById(R.id.mathClassButton);
 
         userInputButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +40,13 @@ public class MainActivity extends AppCompatActivity {
                 //get to UserInput Activity
                 Intent expressionsIntent = new Intent(MainActivity.this, Expressions.class);
                 startActivity(expressionsIntent);
+            }
+        });
+
+        mathClButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Math Class", Toast.LENGTH_LONG).show();
             }
         });
 
