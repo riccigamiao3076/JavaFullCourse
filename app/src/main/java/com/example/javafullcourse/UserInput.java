@@ -10,7 +10,6 @@ import android.widget.Toast;
 public class UserInput extends Activity {
 
     EditText username;
-    Button confirmInput;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -18,7 +17,7 @@ public class UserInput extends Activity {
         setContentView(R.layout.userinput);
 
         username = findViewById(R.id.userName);
-        confirmInput = findViewById(R.id.confirmButton);
+        Button confirmInput = findViewById(R.id.confirmButton);
 
         confirmInput.setOnClickListener(new View.OnClickListener() {
             @Override

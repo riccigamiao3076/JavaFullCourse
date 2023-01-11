@@ -13,21 +13,22 @@ import android.widget.Toast;
 
 public class Expressions extends Activity implements AdapterView.OnItemSelectedListener {
 
-    EditText firstValue, secondValue;
-    Spinner opSpinner;
-    Button answer;
+    //EditText firstValue, secondValue;
+    //Spinner opSpinner;
+    //Button answer;
     TextView displayAns;
     String theChoice;
+    double fV, sV, sum, diff, prod, quo, mod;;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.expressions);
 
-        firstValue = findViewById(R.id.editTextNumber1);
-        secondValue = findViewById(R.id.editTextNumber2);
-        opSpinner = findViewById(R.id.operatorsSpinner);
-        answer = findViewById(R.id.answerButton);
+        EditText firstValue = findViewById(R.id.editTextNumber1);
+        EditText secondValue = findViewById(R.id.editTextNumber2);
+        Spinner opSpinner = findViewById(R.id.operatorsSpinner);
+        Button answer = findViewById(R.id.answerButton);
         displayAns = findViewById(R.id.displayAnswer);
 
         //Operators Spinner
@@ -90,9 +91,8 @@ public class Expressions extends Activity implements AdapterView.OnItemSelectedL
     public void calculate(String fValue, String sValue) {
         try {
             //String to int conversion
-            double fV = Double.parseDouble(fValue);
-            double sV = Double.parseDouble(sValue);
-            double sum, diff, prod, quo, mod;
+            fV = Double.parseDouble(fValue);
+            sV = Double.parseDouble(sValue);
 
             //Operators formula
             sum = fV + sV;
@@ -116,8 +116,8 @@ public class Expressions extends Activity implements AdapterView.OnItemSelectedL
 
         } catch (NumberFormatException e) {
             //Set values to 0 if String is empty
-            int fV = 0;
-            int sV = 0;
+            fV = 0;
+            sV = 0;
         }
     }
 
