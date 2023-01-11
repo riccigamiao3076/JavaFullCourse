@@ -116,7 +116,7 @@ public class MathClass extends Activity implements View.OnClickListener {
                 displayAns.setText(String.valueOf(Math.round(v1)));
                 break;
             case R.id.randomButton:
-                Toast.makeText( this, "Random number", Toast.LENGTH_SHORT).show();
+                Toast.makeText(  this, R.string.rndmNum, Toast.LENGTH_SHORT).show();
                 missingValueChecker(getFV, getSV);
 
                 //Convert double to int for random
@@ -131,7 +131,7 @@ public class MathClass extends Activity implements View.OnClickListener {
 
                 //Checks if the range is invalid
                 if (i1 > i2) {
-                    firstValue.setError("This field should be less than the second field.");
+                    firstValue.setError(getString(R.string.rangeError));
                 } else {
                     //Random generator (max - min + 1) + min
                     int range = i2 - i1 + 1;

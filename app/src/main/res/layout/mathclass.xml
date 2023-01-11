@@ -155,7 +155,7 @@
         android:layout_width="89dp"
         android:layout_height="43dp"
         android:backgroundTint="#3F51B5"
-        android:text="RNDOM"
+        android:text="@string/rndmStr"
         android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"

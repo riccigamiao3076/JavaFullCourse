@@ -45,6 +45,9 @@
     <string name="sideBstr">Enter side b</string>
     <string name="sideAstr">Enter side a</string>
     <string name="roundStr">round</string>
+    <string name="rndmNum">Random number</string>
+    <string name="rangeError">This field should be less than the second field.</string>
+    <string name="rndmStr">RNDOM</string>
 
     <string-array name="operators">
         <item>+</item>
