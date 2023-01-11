@@ -8,12 +8,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
+
 public class MathClass extends Activity implements View.OnClickListener {
 
     EditText firstValue, secondValue, aValue, bValue;
-    Button max, min, ceil, floor, abs, sqrt, round, hypo;
+    Button max, min, ceil, floor, abs, sqrt, round, rndm, hypo;
     TextView displayAns, displayHypo;
     String getFV, getSV, getSideA, getSideB;
+    Random random = new Random();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,7 @@ public class MathClass extends Activity implements View.OnClickListener {
         abs = findViewById(R.id.absButton);
         sqrt = findViewById(R.id.sqrtButton);
         round = findViewById(R.id.roundButton);
+        rndm = findViewById(R.id.randomButton);
         hypo = findViewById(R.id.hypoButton);
 
         max.setOnClickListener(this);
@@ -41,6 +46,7 @@ public class MathClass extends Activity implements View.OnClickListener {
         abs.setOnClickListener(this);
         sqrt.setOnClickListener(this);
         round.setOnClickListener(this);
+        rndm.setOnClickListener(this);
         hypo.setOnClickListener(this);
 
         displayAns = findViewById(R.id.displayAns);
@@ -54,8 +60,9 @@ public class MathClass extends Activity implements View.OnClickListener {
         getSideA = aValue.getText().toString();
         getSideB = bValue.getText().toString();
         double m1, m2, v1, sA, sB;
+        int i1, i2, d1, d2;
 
-        //Convert String to double for Max and Min button
+        //Convert String to double for Max, Min, and Random button
         try {
              m1 = Double.parseDouble(getFV);
              m2 = Double.parseDouble(getSV);
@@ -108,6 +115,30 @@ public class MathClass extends Activity implements View.OnClickListener {
                 firstValueChecker(getFV);
                 displayAns.setText(String.valueOf(Math.round(v1)));
                 break;
+            case R.id.randomButton:
+                Toast.makeText( this, "Random number", Toast.LENGTH_SHORT).show();
+                missingValueChecker(getFV, getSV);
+
+                //Convert double to int for random
+                try {
+                    i1 = Integer.parseInt(getFV);
+                    i2 = Integer.parseInt(getSV);
+
+                } catch (NumberFormatException e) {
+                    i1 = 0;
+                    i2 = 0;
+                }
+
+                //Checks if the range is invalid
+                if (i1 > i2) {
+                    firstValue.setError("This field should be less than the second field.");
+                } else {
+                    //Random generator (max - min + 1) + min
+                    int range = i2 - i1 + 1;
+                    displayAns.setText(String.valueOf(random.nextInt(range) + i1 ));
+                }
+                break;
+
             case R.id.hypoButton:
                 Toast.makeText( this, R.string.hypoNum, Toast.LENGTH_SHORT).show();
                 hypoValueChecker(getSideA, getSideB);
@@ -127,24 +158,29 @@ public class MathClass extends Activity implements View.OnClickListener {
     public void missingValueChecker(String fValue, String sValue) {
         if (fValue.isEmpty()) {
             firstValue.setError(getString(R.string.empty));
+            firstValue.clearFocus();
 
         } else if (sValue.isEmpty()) {
             secondValue.setError(getString(R.string.empty));
+            secondValue.clearFocus();
         }
     }
 
     public void firstValueChecker(String fValue) {
         if (fValue.isEmpty()) {
             firstValue.setError(getString(R.string.empty));
+            firstValue.clearFocus();
         }
     }
 
     public void hypoValueChecker(String fValue, String sValue) {
         if (fValue.isEmpty()) {
             aValue.setError(getString(R.string.empty));
+            aValue.clearFocus();
 
         } else if (sValue.isEmpty()) {
             bValue.setError(getString(R.string.empty));
+            bValue.clearFocus();
         }
     }
 
