@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     Button userInputButton;
     Button expressionButton;
     Button mathClButton;
+    Button logicalOpButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         userInputButton = findViewById(R.id.inputButton);
         expressionButton = findViewById(R.id.expreButton);
         mathClButton = findViewById(R.id.mathClassButton);
+        logicalOpButton = findViewById(R.id.logicOpButton);
 
         userInputButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +52,13 @@ public class MainActivity extends AppCompatActivity {
                 //get to Math Class Activity
                 Intent expressionsIntent = new Intent(MainActivity.this, MathClass.class);
                 startActivity(expressionsIntent);
+            }
+        });
+
+        logicalOpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Logical Operator", Toast.LENGTH_LONG).show();
             }
         });
 
