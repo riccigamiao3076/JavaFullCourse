@@ -58,13 +58,13 @@ public class Expressions extends Activity implements AdapterView.OnItemSelectedL
         if (choice.equals("+")) {
             Toast.makeText(this, R.string.additionToast, Toast.LENGTH_SHORT).show();
         } else if (choice.equals("-")) {
-            Toast.makeText( this, R.string.subtractionToast, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.subtractionToast, Toast.LENGTH_SHORT).show();
         } else if (choice.equals("x")) {
-            Toast.makeText( this, R.string.multiplicationToast, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.multiplicationToast, Toast.LENGTH_SHORT).show();
         } else if (choice.equals("/")) {
-            Toast.makeText( this, R.string.divisionToast, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.divisionToast, Toast.LENGTH_SHORT).show();
         } else if (choice.equals("%")) {
-            Toast.makeText( this, R.string.modulationToast, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.modulationToast, Toast.LENGTH_SHORT).show();
         }
         //Passing String choice (operator)
         store(choice);
