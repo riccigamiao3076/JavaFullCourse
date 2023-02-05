@@ -50,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, R.string.mathClass, Toast.LENGTH_LONG).show();
                 //get to Math Class Activity
-                Intent expressionsIntent = new Intent(MainActivity.this, MathClass.class);
-                startActivity(expressionsIntent);
+                Intent mathCIntent = new Intent(MainActivity.this, MathClass.class);
+                startActivity(mathCIntent);
             }
         });
 
@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Logical Operator", Toast.LENGTH_LONG).show();
+                //get to Logical Operators Activity
+                Intent logicOpIntent = new Intent(MainActivity.this, LogicalOperators.class);
+                startActivity(logicOpIntent);
             }
         });
 

@@ -16,6 +16,7 @@
         <activity android:name=".UserInput"> </activity>
         <activity android:name=".Expressions"> </activity>
         <activity android:name=".MathClass"> </activity>
+        <activity android:name=".LogicalOperators"> </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
